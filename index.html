@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>HOME</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- Iconos de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="/script/app.js" defer></script>
+    <script src="./script/app.js" defer></script>
 
 
 </head>
@@ -33,7 +33,7 @@
 
                 <!-- Enlaces -->
                 <ul class="navbar-nav me-3 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                 </ul>
@@ -49,7 +49,6 @@
                         </div>
                     </form>
                 </div>
-
                 <!-- Iconos derecha -->
                 <div id="btnNav" class="d-flex align-items-center p-2">
                     <a href="#" id="btnLogin" title="Login" data-bs-toggle="modal" data-bs-target="#modalLogin">
@@ -64,7 +63,6 @@
 
 
     <!-- Modal Login -->
-
     <section>
         <div class="modal " id="modalLogin" tabindex="-1" aria-labelledby="modalLoginLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -87,114 +85,174 @@
                             </label>
                         </div>
                         <button class="btn btn-outline-primary" id="login">Ingresar</button>
-                        <button class="btn btn-outline-success" id="registrarse">Registrarse</button><br><br>
+                        <a href="./pages/registro.html" class="btn btn-outline-success">Registrarse</a><br><br>
                         <a href="">Olvide mi contraseña</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <main class="my-5">
-        <div class="container text-center">
-            <h2 class="fw-bold text-success mb-4">Registrarse</h2>
-            <div class="divForm">
-                <form class="container my-4" id="frmRegistro">
+    <main class="container my-5">
+        <!-- presentacion -->
+        <section class="text-center mb-5">
+            <h1 class="fw-bold text-success">Bienvenidos a nuestra tienda</h1>
+            <p class="text-muted fs-5">Encontrá productos naturales, orgánicos y saludables para tu día a día 🍃</p>
+        </section>
 
-                    <!-- Fila 1 -->
-                    <div class="row mb-3">
-                        <div class="col-col-sm-6">
-                            <label for="nombre" class="form-label">Nombre</label>
-                            <input type="text" id="nombre" class="form-control" required>
-                        </div>
-                        <div class="col-col-sm-6">
-                            <label for="apellido" class="form-label">Apellido</label>
-                            <input type="text" id="apellido" class="form-control" required>
-                        </div>
+        <!-- carousel -->
+        <section class="carrusel">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <!-- carousel slides -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- carousel img -->
+                    <div class="carousel-item active">
+                        <img src="./image/carousel_1.jpg" class="d-block w-100" alt="carousel 1">
                     </div>
-
-                    <!-- Fila 2 -->
-                    <div class="row mb-3">
-                        <div class="col-col-sm-6">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="col-col-sm-6">
-                            <label for="password" class="form-label">Contraseña</label>
-                            <input type="password" id="password" class="form-control" required>
-                        </div>
+                    <div class="carousel-item">
+                        <img src="./image/carousel_2.jpg" class="d-block w-100" alt="carousel 2">
                     </div>
-
-                    <!-- Fila 3 -->
-                    <div class="row mb-3">
-                        <div class="col-col-sm-6">
-                            <label for="repetirPassword" class="form-label">Repetir contraseña</label>
-                            <input type="password" id="repetirPassword" class="form-control" required>
-                        </div>
-                        <div class="col-col-sm-6">
-                            <label for="provincia" class="form-label">Provincia</label>
-                            <select id="provincia" name="provincia" class="form-select" required>
-                                <option value="" selected disabled>Seleccioná una provincia...</option>
-                                <option value="0">Buenos Aires</option>
-                                <option value="1">Catamarca</option>
-                                <option value="2">Chaco</option>
-                                <option value="3">Chubut</option>
-                                <option value="4">Córdoba</option>
-                                <option value="5">Corrientes</option>
-                                <option value="6">Entre Ríos</option>
-                                <option value="7">Formosa</option>
-                                <option value="8">Jujuy</option>
-                                <option value="9">La Pampa</option>
-                                <option value="10">La Rioja</option>
-                                <option value="11">Mendoza</option>
-                                <option value="12">Misiones</option>
-                                <option value="13">Neuquén</option>
-                                <option value="14">Río Negro</option>
-                                <option value="15">Salta</option>
-                                <option value="16">San Juan</option>
-                                <option value="17">San Luis</option>
-                                <option value="18">Santa Cruz</option>
-                                <option value="19">Santa Fe</option>
-                                <option value="20">Santiago del Estero</option>
-                                <option value="21">Tierra del Fuego</option>
-                                <option value="22">Tucumán</option>
-                            </select>
-                        </div>
+                    <div class="carousel-item">
+                        <img src="./image/carousel_3.jpg" class="d-block w-100" alt="carousel 3">
                     </div>
-
-
-
-                    <!-- Fila 4 -->
-                    <div class="row mb-3">
-                        <div class="col-col-sm-6">
-                            <label for="ciudad" class="form-label">Ciudad</label>
-                            <input type="text" id="ciudad" class="form-control" required>
-                        </div>
-                        <div class="col-col-sm-6">
-                            <label for="codigoPostal" class="form-label">Código Postal</label>
-                            <input type="number" id="codigoPostal" class="form-control" min="0" required>
-                        </div>
-
+                    <div class="carousel-item">
+                        <img src="./image/carousel_4.jpg" class="d-block w-100" alt="carousel 4">
                     </div>
-
-                    <!-- Fila 5 -->
-                    <div class="row mb-3">
-                        <div class="col-col-sm-6">
-                            <label for="direccion" class="form-label">Dirección</label>
-                            <input type="text" id="direccion" class="form-control" required>
-                        </div>
-                        <div class="col-col-sm-6">
-                            <label for="altura" class="form-label">Altura</label>
-                            <input type="number" id="altura" class="form-control" min="0" required>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-success">Registrarse</button>
-                    </div>
-                </form>
+                </div>
+                <!-- carousel botones-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </div>
-    </main>
+        </section>
+        <!-- Grid de productos -->
+        <section id="productos" class="mb-5">
+            <div class="container">
+                <div class="row m-3">
+                    <div class="card m-2">
+                        <img src="./image/alacena_v2.jpg" class="card-img-top" alt="Productos">
+                        <h5 id="productosTitulo" class="card-title">Productos</h5>
+                    </div>
+                    <div class="card m-2">
+                        <img src="./image/congelados_v2.jpg" class="card-img-top" alt="Congelados">
+                        <h5 id="productosTitulo" class="card-title">Congelados</h5>
+                    </div>
+                    <div class="card m-2">
+                        <img src="./image/promociones.png" class="card-img-top" alt="Promociones">
+                        <h5 id="productosTitulo" class="card-title">Promociones</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Grid de destacados -->
+        <section id="destacados">
+            <h4>Productos Destacados</h4>
+            <div id="carouselDestacados" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <!-- SLIDE 1 -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="./image/congelados_v2.jpg" class="card-img-top" alt="Producto 1">
+                                    <div class="card-body">
+                                        <h5 id="destacadosTitulo" class="card-title">Nombre Producto </h5>
+                                        <p id="destacadosTexto" class="card-text">Descripción breve</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="./image/GRAN01_g.jpg" class="card-img-top" alt="Producto 2">
+                                    <div class="card-body">
+                                        <h5 id="destacadosTitulo" class="card-title">Premezcla pancakes </h5>
+                                        <p id="destacadosTexto" class="card-text">Premezcla para pancakes proteicos</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="./image/alacena_v2.jpg" class="card-img-top" alt="Producto 3">
+                                    <div class="card-body">
+                                        <h5 id="destacadosTitulo" class="card-title">Nombre Producto </h5>
+                                        <p id="destacadosTexto" class="card-text">Descripción breve</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- se cierra el div carousel-item active -->
+                    <!-- SLIDE 2: pon acá los siguientes 3 productos -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <!-- otra tanda de 3 columnas -->
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="./image/YOGR05_g.jpg" class="card-img-top" alt="Producto 4">
+                                    <div class="card-body">
+                                        <h5 id="destacadosTitulo" class="card-title">Yogur </h5>
+                                        <p id="destacadosTexto" class="card-text">Yogur griego con cereales Yogurisimo
+                                            166g.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="./image/GFMA36_g.jpg" class="card-img-top" alt="Producto 5">
+                                    <div class="card-body">
+                                        <h5 id="destacadosTitulo" class="card-title">Nombre Producto </h5>
+                                        <p id="destacadosTexto" class="card-text">Descripción breve</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <div class="card">
+                                    <img src="./image/CITR03_g.jpg" class="card-img-top" alt="Producto 6">
+                                    <div class="card-body">
+                                        <h5 id="destacadosTitulo" class="card-title">Citric </h5>
+                                        <p id="destacadosTexto" class="card-text">Jugo de naranja. 1L</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" id="carrusel-prev" type="button"
+                    data-bs-target="#carouselDestacados" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" id="carrusel-next" type="button"
+                    data-bs-target="#carouselDestacados" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </main>
     <!--  Footer -->
     <footer id="footer" class=" text-white text-center py-4 mt-5">
         <div class="container p-4">
@@ -208,14 +266,11 @@
                 </div>
                 <div id="ayuda" class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Ayuda</h5>
-                    <a href="/pages/faq.html">Preguntas frecuentes</a><br>
-                    <a href="#">¿Cómo comprar?</a>
-
-
+                    <a href="./pages/faq.html">Preguntas frecuentes</a><br>
+                    <a href="./index.html">¿Cómo comprar?</a>
                 </div>
                 <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase">Redes</h5>
-
                     <div id="redes" class="mt-2">
                         <a href="#" class="text-white mx-2"><i class="icono bi bi-facebook"></i></a>
                         <a href="#" class="text-white mx-2"><i class="icono bi bi-instagram"></i></a>
@@ -223,11 +278,7 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
-
-
     </footer>
     <div class="derechos">
         <p class="m-0">© 2025 MARCA - Todos los derechos reservados.</p>
