@@ -112,6 +112,26 @@ body{
   background-color: var(--clr-verde);
 }
 
+.divForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+#frmRegistro {
+  border: 2px solid var(--clr-verde);
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #f8f9fa; 
+  width: fit-content;
+  max-width: 100%; 
+}
+
+option{
+  text-align: center;
+}
+
 
 #footer {
         background-color: var(--clr-verde);
